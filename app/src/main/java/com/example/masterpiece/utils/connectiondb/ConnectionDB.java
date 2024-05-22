@@ -1,4 +1,4 @@
-package com.example.masterpiece.model.connectiondb;
+package com.example.masterpiece.utils.connectiondb;
 
 import android.os.StrictMode;
 
@@ -10,11 +10,11 @@ import java.sql.DriverManager;
 
 public class ConnectionDB {
     private static ConnectionDB instance=null;
-    private Connection con;
-    private static final String URL="";
+    private static Connection con;
+    private static final String URL="jdbc:mysql://roundhouse.proxy.rlwy.net:12317/railway";
     private static final String DRIVER="com.mysql.jdbc.Driver";
     private static final String USER="root";
-    private static final String PASS="";
+    private static final String PASS="ROyoxSBlyZVLoRNzHkwceAOaLVJNPJYE";
 
     private final String TAG="SQL_Connection";
 

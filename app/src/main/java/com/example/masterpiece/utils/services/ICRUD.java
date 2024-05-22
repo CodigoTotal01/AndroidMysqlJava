@@ -1,4 +1,4 @@
-package com.example.masterpiece.model.services;
+package com.example.masterpiece.utils.services;
 
 import java.util.List;
 
