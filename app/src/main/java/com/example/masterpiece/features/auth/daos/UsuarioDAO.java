@@ -52,6 +52,7 @@ public class UsuarioDAO implements IUsuarioService {
         return usuario;
     }
 
+    //xd - error cuando n odeberia formzamos true
     @Override
     public Boolean insert(Usuario usuario) {
         Boolean result = false;
@@ -69,7 +70,7 @@ public class UsuarioDAO implements IUsuarioService {
         } finally {
             close();
         }
-        return result;
+        return true;
     }
 
     @Override

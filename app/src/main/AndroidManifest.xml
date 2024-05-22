@@ -15,6 +15,12 @@
         android:theme="@style/Theme.MasterPiece"
         tools:targetApi="31">
         <activity
+            android:name=".features.clientes.pages.ClienteRegister"
+            android:exported="false" />
+        <activity
+            android:name=".features.auth.pages.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.store.pages.CatalogoProductoActivity"
             android:exported="false" />
         <activity

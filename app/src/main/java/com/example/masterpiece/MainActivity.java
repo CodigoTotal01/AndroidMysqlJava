@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.masterpiece.features.auth.adapter.UsuarioAdapter;
 import com.example.masterpiece.features.auth.daos.UsuarioDAO;
 import com.example.masterpiece.features.auth.entities.Usuario;
+import com.example.masterpiece.features.auth.pages.RegisterActivity;
 import com.example.masterpiece.features.store.pages.TokenActivity;
 
 import java.util.ArrayList;
@@ -31,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnRegister;
 
 
-
-    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 String usuario = edtUsuario1.getText().toString();
                 String password = edtPassword.getText().toString();
 
+
+                // Buscar usuario por nombre de usuario
+                UsuarioDAO usuarioDAO = new UsuarioDAO();
+                Usuario usuarioEncontrado = usuarioDAO.findByNombre(usuario);
+
+
                 // Validar usuario y contraseña
-                if (usuario.equalsIgnoreCase("admin") && password.equals("admin")) {
+                if (usuarioEncontrado != null && usuarioEncontrado.getPassword().equals(password)) {
                     // Generar token de 6 dígitos
                     String token = generateToken();
                     Intent intent = new Intent(getApplicationContext(), TokenActivity.class);
@@ -67,6 +72,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                    startActivity(intent);
+            }
+        });
+
     }
     // Método para generar token de 6 dígitos
     private String generateToken() {
