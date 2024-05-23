@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MasterPiece"
         tools:targetApi="31">
         <activity
+            android:name=".features.store.pages.PatantallaAgradecimientoActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.store.pages.PasarelaDePagoActivity"
             android:exported="false" />
         <activity

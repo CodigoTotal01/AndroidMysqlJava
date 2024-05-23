@@ -58,6 +58,9 @@ public class DetalleProductoActivity extends AppCompatActivity {
             intent.putExtra("nombreProducto", producto.getNombre());
             intent.putExtra("tipoProducto", producto.getTipo());
             intent.putExtra("precioProducto", producto.getPrecio().toString());
+            intent.putExtra("idProducto", Integer.toString(producto.getId())); // Añade esta línea
+
+
             startActivity(intent);
         });
 
