@@ -46,7 +46,7 @@ public class TokenActivity extends AppCompatActivity {
                 // Comparar el token ingresado con el token recibido
                 if (enteredToken.equals(token)) {
                     // Token correcto, iniciar la actividad "ReportesMainActivity"
-                    Intent intent = new Intent(TokenActivity.this, CatalogoProductoActivity.class);
+                    Intent intent = new Intent(TokenActivity.this, GeneralActivity.class);
                     startActivity(intent);
                     finish(); // Finalizar esta actividad para evitar volver atrás
                 } else {

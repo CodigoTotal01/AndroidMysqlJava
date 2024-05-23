@@ -15,6 +15,24 @@
         android:theme="@style/Theme.MasterPiece"
         tools:targetApi="31">
         <activity
+            android:name=".features.empleados.pages.ReporteEmpleadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.ventas.pages.ReporteVentasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.ventas.pages.CatalogoVentaProductosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.productos.pages.CatalogoProductosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.store.pages.GeneralActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.clientes.pages.ClienteCatalogoActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.clientes.pages.ClienteRegister"
             android:exported="false" />
         <activity
