@@ -7,49 +7,49 @@
     android:layout_height="match_parent"
     tools:context=".features.store.pages.GeneralActivity">
 
+
     <Button
         android:id="@+id/btnCatalogoProductos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
         android:text="Catalogo de productos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnCatalogoVentaProductos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Catalogo Venta de Productos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCatalogoProductos" />
 
     <Button
         android:id="@+id/btnReporteVentas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Reporte de Ventas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCatalogoVentaProductos" />
-
-    <Button
-        android:id="@+id/btnReporteClientes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Reporte de clientes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnReporteVentas" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCatalogoProductos" />
 
     <Button
         android:id="@+id/btnReporteEmpleados"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="reporte de empleados"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnReporteClientes" />
+
+    <Button
+        android:id="@+id/btnReporteClientes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Reporte de clientes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReporteVentas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

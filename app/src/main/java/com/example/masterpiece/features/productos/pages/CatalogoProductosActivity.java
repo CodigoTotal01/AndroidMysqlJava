@@ -32,6 +32,8 @@ public class CatalogoProductosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_catalogo_productos);
 
 
+
+
         // Inicializar y configurar RecyclerView
         recyclerView = findViewById(R.id.recyclerProductos);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

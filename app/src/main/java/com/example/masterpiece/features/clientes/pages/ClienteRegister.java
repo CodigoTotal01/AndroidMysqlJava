@@ -51,6 +51,8 @@ public class ClienteRegister extends AppCompatActivity {
                 if (clienteDAO.insert(cliente)) {
                     Toast.makeText(ClienteRegister.this, "Cliente registrado correctamente", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(ClienteRegister.this, CatalogoProductosActivity.class);
+                    clienteDAO.findByNombre(nombre).getId();
+                    intent.putExtra("idCliente", clienteDAO.findByNombre(nombre).getId());
                     startActivity(intent);
                 } else {
                     Toast.makeText(ClienteRegister.this, "Error al registrar cliente", Toast.LENGTH_SHORT).show();

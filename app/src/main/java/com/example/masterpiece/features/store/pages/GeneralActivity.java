@@ -24,7 +24,6 @@ public class GeneralActivity extends AppCompatActivity {
         setContentView(R.layout.activity_general);
 
         Button btnCatalogoProductos = findViewById(R.id.btnCatalogoProductos);
-        Button btnCatalogoVentaProductos = findViewById(R.id.btnCatalogoVentaProductos);
         Button btnReporteVentas = findViewById(R.id.btnReporteVentas);
         Button btnReporteClientes = findViewById(R.id.btnReporteClientes);
         Button btnReporteEmpleados = findViewById(R.id.btnReporteEmpleados);
@@ -37,13 +36,6 @@ public class GeneralActivity extends AppCompatActivity {
             }
         });
 
-        btnCatalogoVentaProductos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(GeneralActivity.this, CatalogoVentaProductosActivity.class);
-                startActivity(intent);
-            }
-        });
 
         btnReporteVentas.setOnClickListener(new View.OnClickListener() {
             @Override

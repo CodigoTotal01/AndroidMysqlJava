@@ -31,7 +31,7 @@ public class PasarelaDePagoActivity extends AppCompatActivity {
 
     private Button btnComprarPagar;
 
-    private String clienteTemporalId = "1";
+    private String clienteTemporalId = "5";
 
 
     @Override
@@ -50,7 +50,6 @@ public class PasarelaDePagoActivity extends AppCompatActivity {
         String nombre = getIntent().getStringExtra("nombreProducto");
         String tipo = getIntent().getStringExtra("tipoProducto");
         String precio = getIntent().getStringExtra("precioProducto");
-
         String idProducto = getIntent().getStringExtra("idProducto");
 
         // Poblar las vistas con los datos del producto

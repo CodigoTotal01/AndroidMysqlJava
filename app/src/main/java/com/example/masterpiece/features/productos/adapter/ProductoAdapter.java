@@ -26,6 +26,8 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
     private Context mCtx;
     private List<Producto> productos;
 
+
+
     public ProductoAdapter(Context mCtx, List<Producto> productos) {
         this.mCtx = mCtx;
         this.productos = productos;

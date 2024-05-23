@@ -11,10 +11,10 @@ import java.sql.DriverManager;
 public class ConnectionDB {
     private static ConnectionDB instance=null;
     private static Connection con;
-    private static final String URL="jdbc:mysql://roundhouse.proxy.rlwy.net:12317/railway";
+    private static final String URL="jdbc:mysql://roundhouse.proxy.rlwy.net:14468/railway";
     private static final String DRIVER="com.mysql.jdbc.Driver";
     private static final String USER="root";
-    private static final String PASS="ROyoxSBlyZVLoRNzHkwceAOaLVJNPJYE";
+    private static final String PASS="rFhHIuBxBIJUtnwlyEuFfasCopQlZYob";
 
     private final String TAG="SQL_Connection";
 
