@@ -1,9 +1,11 @@
 package com.example.masterpiece.features.productos.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.masterpiece.R;
 import com.example.masterpiece.features.productos.entities.Producto;
+import com.example.masterpiece.features.productos.pages.DetalleProductoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +48,14 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
         Glide.with(mCtx)
                 .load(producto.getUrlImagen())
                 .into(holder.imgProducto);
+        holder.btnDetalleProducto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mCtx, DetalleProductoActivity.class);
+                intent.putExtra("nombreProducto", producto.getNombre());
+                mCtx.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -52,11 +63,14 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
         return productos.size();
     }
 
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imgProducto;
         private TextView nombreProducto;
         private TextView tipoProducto;
         private TextView precioProducto;
+
+        private Button btnDetalleProducto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,7 +78,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
             nombreProducto = itemView.findViewById(R.id.nombre_producto);
             tipoProducto = itemView.findViewById(R.id.tipo_producto);
             precioProducto = itemView.findViewById(R.id.precio_producto);
-
+            btnDetalleProducto = itemView.findViewById(R.id.detalle_producto); // Cambia esto al ID correcto
         }
     }
 }

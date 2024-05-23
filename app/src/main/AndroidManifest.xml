@@ -15,6 +15,12 @@
         android:theme="@style/Theme.MasterPiece"
         tools:targetApi="31">
         <activity
+            android:name=".features.store.pages.PasarelaDePagoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.productos.pages.DetalleProductoActivity"
+            android:exported="false" />
+        <activity
             android:name=".features.empleados.pages.ReporteEmpleadosActivity"
             android:exported="false" />
         <activity
